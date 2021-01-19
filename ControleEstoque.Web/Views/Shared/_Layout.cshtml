@@ -11,6 +11,7 @@
 
 <body>
     <header>
+        <!-- navbar navbar-expand-md fixed-top navbar-dark bg-dark -->
         <nav class="navbar navbar-expand-sm navbar-toggleable-sm navbar-light bg-white border-bottom box-shadow mb-3">
             <div class="container">
                 <a class="navbar-brand" asp-area="" asp-controller="Home" asp-action="Index">Controle de Estoque</a>
@@ -26,47 +27,71 @@
                                 Cadastro
                             </a>
                             <div class="dropdown-menu" aria-labelledby="navbarDropdown">
-                                <a class="dropdown-item"  asp-area="" asp-controller="Cadastro"
-                                            asp-action="GrupoProduto">Grupo de Produtos</a>
-                                <a class="dropdown-item"  asp-area="" asp-controller="Cadastro"
-                                            asp-action="MarcaProduto">Marca de Produtos</a>
-                                <a class="dropdown-item"  asp-area="" asp-controller="Cadastro"
-                                            asp-action="LocalProduto">Locais de armazenamentos</a>
-                                <a class="dropdown-item"  asp-area="" asp-controller="Cadastro"
-                                            asp-action="UnidadeMedida">Unidades de medida</a>
-                                <a class="dropdown-item"  asp-area="" asp-controller="Cadastro"
-                                            asp-action="Produto">Produtos</a>
-                                <a class="dropdown-item"  asp-area="" asp-controller="Cadastro"
-                                            asp-action="Fornecedor">Fornecedores</a>
-                                <a class="dropdown-item"  asp-area="" asp-controller="Cadastro"
-                                            asp-action="Paises">País</a>
-                                <a class="dropdown-item"  asp-area="" asp-controller="Cadastro"
-                                            asp-action="Estados">Estados</a>
-                                <a class="dropdown-item"  asp-area="" asp-controller="Cadastro"
-                                            asp-action="Cidades">Cidades</a>
-                                <a class="dropdown-item"  asp-area="" asp-controller="Cadastro"
-                                            asp-action="PerfilUsuario">Perfis de Usuários</a>
-                                <a class="dropdown-item"  asp-area="" asp-controller="Cadastro"
-                                            asp-action="Usuario">Usuários</a>
+                                <a class="dropdown-item" asp-area="" asp-controller="Cadastro"
+                                    asp-action="GrupoProduto">Grupo de Produtos</a>
+                                <a class="dropdown-item" asp-area="" asp-controller="Cadastro"
+                                    asp-action="MarcaProduto">Marca de Produtos</a>
+                                <a class="dropdown-item" asp-area="" asp-controller="Cadastro"
+                                    asp-action="LocalProduto">Locais de armazenamentos</a>
+                                <a class="dropdown-item" asp-area="" asp-controller="Cadastro"
+                                    asp-action="UnidadeMedida">Unidades de medida</a>
+                                <a class="dropdown-item" asp-area="" asp-controller="Cadastro"
+                                    asp-action="Produto">Produtos</a>
+                                    <div class="dropdown-divider"></div>
+                                <a class="dropdown-item" asp-area="" asp-controller="Cadastro"
+                                    asp-action="Fornecedor">Fornecedores</a>
+                                <a class="dropdown-item" asp-area="" asp-controller="Cadastro"
+                                    asp-action="Paises">País</a>
+                                <a class="dropdown-item" asp-area="" asp-controller="Cadastro"
+                                    asp-action="Estados">Estados</a>
+                                <a class="dropdown-item" asp-area="" asp-controller="Cadastro"
+                                    asp-action="Cidades">Cidades</a>
+                                    <div class="dropdown-divider"></div>
+                                <a class="dropdown-item" asp-area="" asp-controller="Cadastro"
+                                    asp-action="PerfilUsuario">Perfis de Usuários</a>
+                                <a class="dropdown-item" asp-area="" asp-controller="Cadastro"
+                                    asp-action="Usuario">Usuários</a>
                             </div>
                         </li>
-                        <li>
-                            <a class="nav-link text-dark" href="#">
+                        <li class="nav-item dropdown">
+                            <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button"
+                                data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
                                 Operações
                             </a>
+                            <div class="dropdown-menu" aria-labelledby="navbarDropdown">
+                                <a class="dropdown-item" asp-area="" asp-controller="Operacao"
+                                    asp-action="EntradaEstoque">Entrada de produtos</a>
+                                <a class="dropdown-item" asp-area="" asp-controller="Operacao"
+                                    asp-action="SaidaEstoque">Saída de produtos</a>
+                                <a class="dropdown-item" asp-area="" asp-controller="Operacao"
+                                    asp-action="LancPerdaProduto">Lançamento de perdas</a>
+                                <a class="dropdown-item" asp-area="" asp-controller="Operacao"
+                                    asp-action="Inventario">Inventário de Estoque</a>
+                            </div>
                         </li>
-                        <li>
-                            <a class="nav-link text-dark" href="#">
+                        <li class="nav-item dropdown">
+                            <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button"
+                                data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
                                 Relatórios
                             </a>
+                            <div class="dropdown-menu" aria-labelledby="navbarDropdown">
+                                <a class="dropdown-item" asp-area="" asp-controller="Relatorio"
+                                    asp-action="PosicaoEstoque">Posição do Estoque</a>
+                                <a class="dropdown-item" asp-area="" asp-controller="Relatorio"
+                                    asp-action="Ressuprimento">Ressuprimento</a>
+                            </div>
                         </li>
-                        <li>
-                            <a class="nav-link text-dark" href="#">
+                        <li class="nav-item dropdown">
+                            <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button"
+                                data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
                                 Gráficos
                             </a>
-                        </li>
-                        <li class="nav-item">
-                            <a class="nav-link text-dark" asp-area="" asp-controller="Home" asp-action="Index">Home</a>
+                            <div class="dropdown-menu" aria-labelledby="navbarDropdown">
+                                <a class="dropdown-item" asp-area="" asp-controller="Grafico"
+                                    asp-action="PerdaMes">Perdas (mês)</a>
+                                <a class="dropdown-item" asp-area="" asp-controller="Grafico"
+                                    asp-action="EntradaSaidaMes">Entrada vs Saída (mês)</a>
+                            </div>
                         </li>
                         <li class="nav-item">
                             <a class="nav-link text-dark" asp-area="" asp-controller="Home" asp-action="Sobre">Sobre</a>
